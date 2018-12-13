@@ -1,0 +1,17 @@
+<div class="container list-page">
+	
+	<h1 id = "headingTag" >Sales Orders:</h1>
+	
+	<table>	
+		<thead>
+			<tr class = "salesHeaders" >
+				<th>Sales Order ID</th>
+				<th>Sales Order Name</th>
+			</tr>
+		</thead>
+	</table>
+	<div *ngFor="let salesOrder of salesOrders | async" class="sales-orders">
+	  <sales-order-details [salesOrder]='salesOrder'></sales-order-details>
+	</div>
+
+</div>
